@@ -15,6 +15,9 @@ import java.util.Collections;
 // Ch01-02  import java.util.Comparator;
 import java.util.List;
 
+/*
+ * oops, this comment is not quite right.
+ */
 public class MainActivity extends AppCompatActivity {
 
  //Ch01-02       TextView tvOut;
