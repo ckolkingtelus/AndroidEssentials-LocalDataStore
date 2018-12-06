@@ -1,5 +1,7 @@
 package com.example.android.data.sample;
 
+import android.util.Log;
+
 import com.example.android.data.model.DataItem;
 
 import java.util.ArrayList;
@@ -17,10 +19,16 @@ public class SampleDataProvider {
         dataItemMap = new HashMap<>();
 
         // static data copied from Gist @ git.io/viuDI
-        addItem(new DataItem(null, "Quinoa Salmon Salad", "Salads",
+//        addItem(new DataItem(null, "Quinoa Salmon Salad", "Salads",
+//                "Our quinoa salad is served with quinoa, tomatoes, cucumber, scallions, and smoked salmon. Served with your choice of dressing.",
+//                1, 12, "quinoa_salad.jpg"));
+        DataItem FirstDataItem = new DataItem(null, "Quinoa Salmon Salad", "Salads",
                 "Our quinoa salad is served with quinoa, tomatoes, cucumber, scallions, and smoked salmon. Served with your choice of dressing.",
-                1, 12, "quinoa_salad.jpg"));
-
+                1, 12, "quinoa_salad.jpg");
+        addItem(FirstDataItem);
+        // brief debug to show first add was successful:
+        Log.d("LDS-Kolking", "SampleDataProvider first addItem complete; data added is: ");
+        Log.d("LDS-Kolking", FirstDataItem.toString());
         addItem(new DataItem(null, "Chef's Salad", "Salads",
                 "The chef’s salad has cucumber, tomatoes, red onions, mushrooms, hard-boiled eggs, cheese, and hot grilled chicken on a bed of romaine lettuce. Served with croutons and your choice of dressing.",
                 2, 9, "chef_salad.jpg"));
