@@ -2,6 +2,7 @@ package com.example.android.data;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 // import android.widget.TextView;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
+            Log.d("LDS-Kolking", "Main onCreate");
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     this, android.R.layout.simple_list_item_1, dataItemNames);
 
             ListView listView = (ListView) findViewById(android.R.id.list);
+            Log.d("LDS-Kolking", "Main onCreate display list view");
             listView.setAdapter(adapter);
         }
 }
