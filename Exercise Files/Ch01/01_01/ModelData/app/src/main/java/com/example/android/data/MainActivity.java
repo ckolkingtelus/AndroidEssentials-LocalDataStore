@@ -51,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                     this, android.R.layout.simple_list_item_1, dataItemNames);
 
-            ListView listView = (ListView) findViewById(android.R.id.restolist);
+            // ListView listView = (ListView) findViewById(android.R.id.list);
+            // NOTE that custom id is not in "android.R":
+            ListView listView = (ListView) findViewById(R.id.restolist);
             listView.setAdapter(adapter);
         }
 }

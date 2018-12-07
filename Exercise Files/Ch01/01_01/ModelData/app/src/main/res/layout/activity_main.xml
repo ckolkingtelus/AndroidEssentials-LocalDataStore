@@ -20,7 +20,7 @@
 
     <!-- this a default id from android:
 android:id="@android:id/list"
-instead use a custom id "restoMenuItemList" or "restolist": -->
+instead use a custom id "restoMenuItemList" or "restolist": id=@+id/restolist -->
     <ListView
         android:id="@+id/restolist"
         android:layout_width="match_parent"
