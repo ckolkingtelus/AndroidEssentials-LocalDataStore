@@ -18,9 +18,13 @@
         style="@style/Base.TextAppearance.AppCompat.Large"/>
         -->
 
+    <!-- this a default id from android:
+android:id="@android:id/list"
+instead use a custom id "restoMenuItemList" or "restolist": id=@+id/restolist -->
     <ListView
-        android:id="@android:id/list"
+        android:id="@+id/restolist"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+    />
 
 </RelativeLayout>

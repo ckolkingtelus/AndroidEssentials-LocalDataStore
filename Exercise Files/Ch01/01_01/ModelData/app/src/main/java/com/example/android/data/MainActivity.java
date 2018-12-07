@@ -58,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                     this, android.R.layout.simple_list_item_1, dataItemNames);
 
-            ListView listView = (ListView) findViewById(android.R.id.list);
+            // ListView listView = (ListView) findViewById(android.R.id.list);
+            // NOTE that custom id is not in "android.R":
+            ListView listView = (ListView) findViewById(R.id.restolist);
             Log.d("LDS-Kolking", "Main onCreate display list view");
             listView.setAdapter(adapter);
         }
