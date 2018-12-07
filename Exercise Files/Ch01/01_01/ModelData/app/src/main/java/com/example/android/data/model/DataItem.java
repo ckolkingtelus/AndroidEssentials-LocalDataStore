@@ -1,5 +1,7 @@
 package com.example.android.data.model;
 
+import android.util.Log;
+
 public class DataItem {
 
     // handy to use only String and Primitive data types for the class to pass around.
@@ -82,6 +84,7 @@ public class DataItem {
 
     @Override
     public String toString() {
+        Log.d("LDS-Kolking", "DataItem toString");
         return "DataItem{" +
                 "itemId='" + itemId + '\'' +
                 ", itemName='" + itemName + '\'' +
