@@ -13,9 +13,14 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-    }
 
-    String testString = CONSTANT_STRING_TEST;
-    Log.d("LDS-Kolking", testString);
+        // "CORRECTION A"
+        String testString = CONSTANT_STRING_TEST;
+        Log.d("LDS-Kolking", testString);
+    }
+// STUPID!! of course, can't have code simply running as part of the class definition;  the code needs to go into a component method!!
+    // see "CORRECTION A" above...
+//    String testString = CONSTANT_STRING_TEST;
+//    Log.d("LDS-Kolking", testString);
 
 }
