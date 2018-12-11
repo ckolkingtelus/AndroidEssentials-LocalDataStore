@@ -53,7 +53,12 @@ public class MainActivity extends AppCompatActivity {
                 //Ch01-02  tvOut.append(item.getItemName() + "\n");
                 dataItemNames.add(item.getItemName());
             }
-            Collections.sort(dataItemNames);  // no custom comparator needed as opposed to Ch01-02 code.
+            // I added the 'try-catch' with the Android Studio menu "Code - Surround With.." item, but this try-catch is not really needed here:
+            try {
+                Collections.sort(dataItemNames);  // no custom comparator needed as opposed to Ch01-02 code.
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                     this, android.R.layout.simple_list_item_1, dataItemNames);
