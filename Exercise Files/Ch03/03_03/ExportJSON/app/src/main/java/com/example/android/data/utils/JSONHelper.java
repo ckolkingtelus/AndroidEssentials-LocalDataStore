@@ -24,8 +24,8 @@ public class JSONHelper {
      * this function 'exportToJSON' uses the Gson library to manipulate
      * the data list into Json structure
      * that can be put into a file.
-     * @param context I don't know why the app/activity context is needed for this function
-     * @param dataItemList this is the list of data (type DataItem) that will be Json-ified
+     * @param context I don't know why the activity context is needed for this function.
+     * @param dataItemList this is the list of data (type DataItem) that will be Json-ified.
      * @return true if the file is written successfully, otherwise false.
      */
     public static boolean exportToJSON(Context context, List<DataItem> dataItemList) {
@@ -59,7 +59,12 @@ public class JSONHelper {
         return false;
     }
 
-
+    /**
+     * the function 'importFromJSON' will read a file if it exists and translate the
+     * JSON formatted contents into the data items list used in the app UI.
+     * @param context is needed because ... why is application context needed?
+     * @return
+     */
     public static List<DataItem> importFromJSON(Context context) {
 
         FileReader fileReader = null;
