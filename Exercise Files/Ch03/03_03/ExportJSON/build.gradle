@@ -2,10 +2,25 @@
 
 buildscript {
     repositories {
+        // FIX (part 2a of 4) I think I also need this as per dev'r.android:
+        // "// Gradle 4.1 and higher include support for Google's Maven repo using
+        //        // the google() method. And you need to include this repo to download
+        //        // Android Gradle plugin 3.0.0 or higher."
+        google() // FIX (part 2a of 2)
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.0'
+        // ISSUE: build tools v "2.2.0" requests to insall "Build Tools 24.0.2", but I have newer build tools:
+        //   classpath 'com.android.tools.build:gradle:2.2.0' - SDK platform-tools v28, SDK tools v26
+        // FIX (part 1 of 4): update gradle plug-in to latest version 3.2.1:
+        //   Also FIX (part 3 of 4) file "gradle-wrapper.properties"
+        //     OLD: distributionUrl=https\://services.gradle.org/distributions/gradle-2.14.1-all.zip
+        //     NEW = distributionUrl = https\://services.gradle.org/distributions/gradle-4.6-all.zip
+        //   Also FIX (part 4 of 4) in "app" level file 'build.gradle' change
+        //     OLD: buildToolsVersion "24.xxxx" to
+        //     NEW = "28.0.3" ; get v from menu
+        //     File->Settings->android SDK->SDK Tools->sdk Build-tools->v<#>->show package details==>v28.0.3
+        classpath 'com.android.tools.build:gradle:3.2.1'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -14,6 +29,7 @@ buildscript {
 
 allprojects {
     repositories {
+        google() // FIX (part 2b of 4)
         jcenter()
     }
 }
