@@ -81,6 +81,14 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.action_export:
                 boolean result = JSONHelper.exportToJSON(this, dataItemList);
+                if (result) {
+//                    Toast resultToast = new Toast(this);
+//                    resultToast.makeText(this, "Data written to file", Toast.LENGTH_SHORT);
+//                    resultToast.show();
+                    Toast.makeText(this, "Exported data list as Json into file", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Failed to write file", Toast.LENGTH_SHORT).show();
+                }
                 return true;
             case R.id.action_import:
                 return true;
