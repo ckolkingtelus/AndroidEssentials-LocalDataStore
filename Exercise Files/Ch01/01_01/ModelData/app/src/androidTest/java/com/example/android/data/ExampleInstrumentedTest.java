@@ -21,6 +21,10 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.android.dummydata", appContext.getPackageName());
+        // expected package name:
+//        String testPackageName = "com.example.android.dummydata";  // should fail
+        String testPackageName = "com.example.android.data";  // should pass
+
+        assertEquals(testPackageName, appContext.getPackageName());
     }
 }
